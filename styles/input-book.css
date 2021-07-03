@@ -1,0 +1,46 @@
+.input-book {
+  position: sticky;
+  padding: 1em;
+  border: 1px solid rgb(241, 241, 244);
+  border-radius: 3px;
+}
+
+.input-book-header {
+  margin-top: 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.input label {
+  margin: 0 0 0.5em;
+}
+
+.input-checkbox {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.book-submit{
+  cursor: pointer;
+  width: 100%;
+}
+
+.book-submit-reset{
+  cursor: pointer;
+  margin-top: 1em;
+  width: 100%;
+  color: var(--primary--dark-color);
+  background-color: #ffffff;
+  border: 1px solid var(--primary-color);
+}
+
+.book-submit-reset:hover{
+  background-color: #f1f1f1;
+}

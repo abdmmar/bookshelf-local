@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf App</title>
+    <meta name="description" content="Track your reading progress on the Bookshelf App">
+    <meta name="keywords" content="Bookshelf, book, website, app, html, css, js, dicoding, frontend">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="Abdullah Ammar - 2021">
+    <meta name="language" content="EN">
+    <meta name="author" content="Abdullah Ammar">
+    <meta name="creationdate" content="23 June 2021">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="app">
+        <header class="header">
+          <div class="header-title">
+            <h2><a href="/">Bookshelf</a></h2>
+          </div>
+
+          <div class="search">
+            <form class="search-book">
+              <label for="search-book-title" class="sr-only">Search Book</label>
+              <input
+                class="search-book-title"
+                type="text"
+                placeholder="Search Book by Title"
+              />
+
+              <button class="search-submit btn-icon" aria-label="Search" type="submit">
+                <svg
+                  width="18"
+                  height="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  color="#ffffff"
+                  focusable="false"
+                >
+                  <use href="#icon-search" />
+                </svg>
+                <span class="tooltip">Search Book</span>
+              </button>
+            </form>
+          </div>
+        </header>
+
+        <main>
+          <div class="main">
+            <div>
+              <section class="input-book">
+                <h3 class="input-book-header">Add New Book</h3>
+
+                <form class="input-book-form">
+                  <div class="input">
+                    <label for="input-book-title">Title</label>
+                    <input
+                      id="input-book-title"
+                      type="text"
+                      placeholder="Norwegian Wood"
+                      required
+                    />
+                  </div>
+                  <div class="input">
+                    <label for="input-book-author">Author</label>
+                    <input
+                      id="input-book-author"
+                      type="text"
+                      placeholder="Haruki Murakami"
+                      required
+                    />
+                  </div>
+                  <div class="input">
+                    <label for="input-book-year">Year</label>
+                    <input
+                      id="input-book-year"
+                      type="number"
+                      placeholder="1987"
+                      required
+                    />
+                  </div>
+                  <div class="input-checkbox">
+                    <input id="input-book-is-complete" type="checkbox" />
+                    <label for="input-book-is-complete">Completed</label>
+                  </div>
+                  <button class="book-submit" type="submit">
+                    Add Book to Bookshelf
+                  </button>
+                </form>
+              </section>
+            </div>
+
+            <div class="bookshelf-container">
+              <section class="bookshelf">
+                <h3>Reading List</h3>
+
+                <ul id="reading-list" class="book-list"></ul>
+              </section>
+
+              <section class="bookshelf">
+                <h3>Finished Books</h3>
+
+                <ul id="finished-books" class="book-list"></ul>
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Storage for SVG Icons -->
+    <svg class="svg" style="display: none">
+      <symbol id="icon-search">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+        ></path>
+      </symbol>
+      <symbol id="icon-trash">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+        ></path>
+      </symbol>
+      <symbol id="icon-check">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        ></path>
+      </symbol>
+      <symbol id="icon-book">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+        ></path>
+      </symbol>
+    </svg>
+
+    <script src="script/main.js" type="module"></script>
+  </body>
+</html>

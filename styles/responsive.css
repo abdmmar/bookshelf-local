@@ -1,0 +1,37 @@
+@media (max-width: 450px) {
+  .root{
+    padding: 1em;
+  }
+
+  .app{
+    margin: 1em;
+    gap: 2em !important;
+  }
+  .header{
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .header-title{
+    margin: 0;
+  }
+
+  .main{
+    grid-template-columns: 1fr !important;
+  }
+
+  .bookshelf-container{
+    grid-template-columns: 1fr;
+  }
+
+  .book-list{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .book-list li{
+    margin: 0 !important;
+  }
+}

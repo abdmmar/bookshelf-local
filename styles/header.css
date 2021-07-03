@@ -1,0 +1,41 @@
+.header {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 2fr 5fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0 1em;
+}
+
+.header-title h2  a {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
+.search {
+  width: 100%;
+}
+
+.search-book {
+  display: flex;
+}
+
+.search-book-title {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary--dark-color);
+}
+
+.search-submit{
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0 !important;
+  color: var(--stroke-color);
+  background-color: var(--primary-color) !important;
+  border: 1px solid var(--primary--dark-color) !important;
+}
